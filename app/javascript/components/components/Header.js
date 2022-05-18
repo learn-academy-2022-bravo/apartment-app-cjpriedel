@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Nav, NavItem } from 'reactstrap'
+import { NavLink } from 'react-router-dom'
 
 class Header extends Component {
   render() {
@@ -18,27 +19,27 @@ class Header extends Component {
         <Nav>
           {!logged_in &&
             <NavItem>
-              <a href="/" className="nav-link">Home</a>
+              <NavLink to="/" className="nav-link">Home</NavLink>
             </NavItem>
           }
           {!logged_in &&
             <NavItem>
-              <a href="/apartmentindex" className="nav-link">Available Apartments</a>
+              <NavLink to="/apartmentindex" className="nav-link">Available Apartments</NavLink>
             </NavItem>
           }
           {logged_in &&
             <NavItem>
-              <a href={sign_out_route} className="nav-link">Sign Out</a>
+              <NavLink to={sign_out_route} className="nav-link">Sign Out</NavLink>
             </NavItem>
           }
           {!logged_in &&
             <NavItem>
-              <a href={sign_in_route} className="nav-link">Sign In</a>
+              <NavLink to={sign_in_route} className="nav-link">Sign In</NavLink>
             </NavItem>
           }
           {!logged_in &&
             <NavItem>
-              <a href={new_user_route} className="nav-link">Sign Up</a>
+              <NavLink to={new_user_route} className="nav-link">Sign Up</NavLink>
             </NavItem>
           }
 
