@@ -29,17 +29,17 @@ class Header extends Component {
           }
           {logged_in &&
             <NavItem>
-              <NavLink to={sign_out_route} className="nav-link">Sign Out</NavLink>
+              <a href={sign_out_route} className="nav-link">Sign Out</a>
             </NavItem>
           }
           {!logged_in &&
             <NavItem>
-              <NavLink to={sign_in_route} className="nav-link">Sign In</NavLink>
+              <a href={sign_in_route} className="nav-link">Sign In</a>
             </NavItem>
           }
           {!logged_in &&
             <NavItem>
-              <NavLink to={new_user_route} className="nav-link">Sign Up</NavLink>
+              <a href={new_user_route} className="nav-link">Sign Up</a>
             </NavItem>
           }
 
